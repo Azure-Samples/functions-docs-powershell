@@ -16,7 +16,7 @@ if ($name) {
     # Write the $name value to the queue, 
     # which is the name passed to the function.
     $outputMsg = $name
-    Push-OutputBinding -name Message -Value $outputMsg
+    Push-OutputBinding -name msg -Value $outputMsg
 
     $status = [HttpStatusCode]::OK
     $body = "Hello $name"
