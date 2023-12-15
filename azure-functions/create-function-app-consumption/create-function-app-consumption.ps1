@@ -23,7 +23,7 @@ New-AzStorageAccount -Name $storage -Location $location -ResourceGroupName $reso
 
 # Create a serverless function app in the resource group.
 Write-Host "Creating $functionApp"
-New-AzFunctionApp -Name $functionApp -StorageAccountName $storage -Location $location -ResourceGroupName $resourceGroup -Runtime DotNet -FunctionsVersion $functionsVersion
+New-AzFunctionApp -Name $functionApp -StorageAccountName $storage -Location $location -ResourceGroupName $resourceGroup -Runtime DotNet-Isolated -FunctionsVersion $functionsVersion
 # </FullScript>
 
 # echo "Deleting all resources"
